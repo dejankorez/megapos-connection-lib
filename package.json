@@ -1,0 +1,47 @@
+{
+  "name": "megapos-connection-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dejankorez/megapos-connection-lib.git"
+  },
+  "keywords": [
+    "megapos",
+    "payment"
+  ],
+  "author": "Dejan Korez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dejankorez/megapos-connection-lib/issues"
+  },
+  "homepage": "https://github.com/dejankorez/megapos-connection-lib#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
