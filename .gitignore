@@ -60,3 +60,6 @@ typings/
 # IDE
 .code
 .idea
+
+# custom 
+certs
