@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/dejankorez/megapos-connection-lib#readme",
   "devDependencies": {
+    "@types/bluebird": "^3.5.32",
     "@types/jest": "^25.2.3",
+    "@types/uuid": "^8.0.0",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^7.0.0",
@@ -43,5 +45,9 @@
     "*.{js,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "soap": "^0.31.0",
+    "uuid": "^8.1.0"
   }
 }
