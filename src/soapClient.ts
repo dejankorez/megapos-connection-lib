@@ -3,6 +3,8 @@ import * as https from 'https';
 import * as fs from 'fs';
 
 import { SoapConfig, ClientOptions } from './interfaces/soapClient';
+import { InitBodyData } from './interfaces/initParams';
+import { InitTransactionResponse } from './interfaces/initTransactionParser';
 
 export class SoapClient {
   private readonly soapConfig: SoapConfig;
@@ -19,10 +21,10 @@ export class SoapClient {
   };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public sendViaSoapClient = (client: any, bodyData: any): Promise<any> =>
+  public sendViaSoapClient = (client: any, bodyData: InitBodyData): Promise<InitTransactionResponse> =>
     new Promise((resolve, reject) => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      client(bodyData, (err: any, result: any) => {
+      client(bodyData, (err: any, result: InitTransactionResponse) => {
         if (err) {
           return reject(err);
         }
